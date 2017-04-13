@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+   
+  </head>
+  <body>
+
+      <h2> Location List </h2> 
+    <% if (location) { %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Catagory</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < location.length; i++) {%>
+            <tr>
+              <td><%= location[i].name %></td>
+              <td><%= location[i].catagory %></td>
+              <td><%= location[i].latitude %></td> 
+              <td><%= location[i].longitude %></td>
+              <td><a href='/location/edit/<%= location[i]._id %>' > Edit</a> <a href='/location/delete/<%= location[i]._id %>' > Delete</a> </td>
+            </tr>
+          <% } %>
+        </tbody> 
+      </table>
+    <% } else{ %>
+        <hr />
+        <p> No record found!</p>
+    <% } %>
+  </body>
+</html>

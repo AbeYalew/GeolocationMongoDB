@@ -1,0 +1,20 @@
+<head> 
+        <title>GeoHash</title>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript">
+            var loadMap = function() 
+            {
+                var myOptions = {
+                  center: new google.maps.LatLng(41.0178,-91.9673),
+                  zoom: <%=10%>,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("map"),
+                    myOptions);
+            };
+            window.onload= loadMap;
+        </script>
+    </head>
+    <body>
+        <div id="map" style="width:600px;height:600px;"></div>
+    </body>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+  </head>
+  <body>
+
+ <h1>New Location</h1>
+    <hr />
+    <form method='post'>
+        
+
+        <div>
+          <label for="inputName">Name</label>
+          <input name='name' type="text" placeholder="Name">
+        </div>
+
+        <div class="form-group">
+          <label for="inputCategory">Category</label>
+          <select name='category'>
+            <option value='Restaurant'>Restaurant</option>
+            <option value='School'>School</option>
+            <option value='Shop'>Shop</option>
+            <option value='Library'>Library</option>
+            <option value='Hospital'>Hospital</option>
+          </select>
+        </div>
+
+            <div >
+                <div >Address</div>
+                <div>
+                 <label for="latitude">Latitude</label>
+                   <input name='latitude' type="text">
+                </div>
+                <div>
+                 <label for="longitude">Longitude</label>
+                   <input name='longitude' type="text">
+                </div>
+                
+            </div>
+       
+
+        <button type="submit">Add Place</button>
+  </body>
+</html>
